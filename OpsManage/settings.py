@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ''' celery config '''
 djcelery.setup_loader()
-BROKER_URL = 'redis://192.168.88.233:6379/4' 
+BROKER_URL = 'redis://127.0.0.1:6379/3' 
 CELERY_RESULT_BACKEND = 'djcelery.backends.database.DatabaseBackend'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER='pickle'
@@ -57,7 +57,7 @@ CELERY_DEFAULT_ROUTING_KEY = 'default'
 
 
 
-REDSI_KWARGS_LPUSH = {"host":'192.168.88.233','port':6379,'db':3}
+REDSI_KWARGS_LPUSH = {"host":'127.0.0.1','port':6379,'db':3}
 REDSI_LPUSH_POOL = None
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -161,8 +161,8 @@ DATABASES = {
         'ENGINE':'django.db.backends.mysql',
         'NAME':'opsmanage',
         'USER':'root',
-        'PASSWORD':'welliam',
-        'HOST':'192.168.88.201'                
+        'PASSWORD':'',
+        'HOST':'127.0.0.1'                
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
