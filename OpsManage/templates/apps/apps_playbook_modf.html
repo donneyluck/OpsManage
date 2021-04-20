@@ -213,7 +213,15 @@
 	<script src="http://cdn.bootcss.com/ace/1.2.4/ext-old_ie.js"></script>
 	<script src="http://cdn.bootcss.com/ace/1.2.4/theme-monokai.js"></script> 
 <script type="text/javascript">
-$(function () { $("[data-toggle='tooltip']").tooltip(); });
+$(function () {
+	$("[data-toggle='tooltip']").tooltip();
+	$('#playbook_server').multiselect({
+        enableClickableOptGroups: true,
+        enableCollapsibleOptGroups: true,
+        includeSelectAllOption: true,
+       	enableFiltering: true,
+    });
+});
 
 function oBtInventorySelect(obj){
 	   var obj = document.getElementById("ansible_inventory"); 
